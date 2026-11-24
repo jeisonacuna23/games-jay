@@ -12,11 +12,11 @@ class MainActivity : AppCompatActivity() {
 
         val rain = findViewById<MatrixRainView>(R.id.matrixRain)
         
-        // Caracteres en español (mayúsculas, números y símbolos)
-        rain.charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&@".toCharArray()
+        // Usamos el conjunto predefinido ALNUM (letras y números)
+        rain.charSet = MatrixRainView.CharSet.ALNUM
         
-        // Estelas más largas: aumentamos la densidad y bajamos un poco la velocidad
-        rain.density = 2.0f 
+        // Estelas más largas: más densidad (columnas) y velocidad moderada
+        rain.density = 2.5f 
         rain.speed = 0.8f   
         
         rain.rainColor = Color.parseColor("#00FF41")
